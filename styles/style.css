@@ -192,7 +192,7 @@
 
 .sparks {
   opacity: 0;
-  fill: var(--accent-color);
+  fill: var(--animation-fill-color);
 }
 
 .like-icon:hover .core {
@@ -294,12 +294,11 @@
 }
 
 /*подвал*/
-.footer {
+.save-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 100px auto;
-  background-color: var(--background-color);
+  margin: 50px auto 100px;
   width: 100%;
   max-width: var(--width);
   box-sizing: border-box;
@@ -324,7 +323,7 @@
 
 .dialog {
   border: var(--border);
-  padding: 30px;
+  padding: 0;
   width: 100%;
   max-width: clamp(21.3125rem, 20.4471rem + 3.6923vw, 22.0625rem);
   background-color: var(--bg-color);
@@ -332,12 +331,11 @@
 }
 
 .button__ok {
+  grid-column: 1 / -1;
+  grid-row: 2;
   justify-content: center;
   width: 100%;
-  border: var(--border);
-  background-color: var(--bg-color);
-  padding: 10.5px 0;
-  text-transform: uppercase;
+  box-sizing: border-box;
 }
 
 .dialog::backdrop {
@@ -345,22 +343,39 @@
 }
 
 .dialog[open] {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
+}
+
+.dialog__container {
+  display: grid;
+  grid-template-columns: 39px 1fr;
+  grid-template-rows: auto auto;
   gap: 20px;
   align-items: center;
-  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.floppy__dialog {
+  grid-column: 1;
+  grid-row: 1;
+  width: 39px;
+  height: 39px;
+  display: block;
 }
 
 .dialog__text {
-  flex: 1;
+  grid-column: 2;
+  grid-row: 1;
   text-transform: uppercase;
   line-height: 150%;
   font-size: 14px;
+  font-family: var(--accent-font);
+  text-align: left;
 }
 
 /*адаптивность*/
-@media (width <= 375px) {
+@media (width <=375px) {
   .save__button {
     flex-direction: column;
   }
