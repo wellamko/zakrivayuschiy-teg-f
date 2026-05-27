@@ -14,7 +14,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font);
-  font-variation-settings: var(--text-weight);
+  font-variation-settings: "wght" var(--text-weight); 
   background-image: var(--bg-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -72,7 +72,7 @@
   font-size: 18px;
   line-height: normal;
   font-style: normal;
-  font-variation-settings: var(--title-weight);
+  font-variation-settings: "wght" var(--title-weight);
 }
 
 .content__img {
