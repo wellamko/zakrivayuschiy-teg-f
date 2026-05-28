@@ -312,12 +312,9 @@
 }
 
 .save__svg {
-  width: 21px;
-  height: 21px;
+  fill: currentColor;
   mix-blend-mode: difference;
   color: var(--difference);
-  flex-shrink: 0;
-  z-index: 1;
 }
 
 .dialog {
